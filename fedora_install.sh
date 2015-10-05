@@ -1,4 +1,7 @@
-sudo dnf install zsh i3 arandr atom redshift firefox midori cmus clementine vim vlc keepass mplayer transmission libreoffice network-manager-applet git pcmanfm thunar gummi mupdf lxterminal rxvt-unicode htop nitrogen filezilla powerline tmux tmux-powerline vim-plugin-powerline
+#!/bin/bash
+sudo dnf install zsh i3 arandr atom redshift firefox midori cmus clementine vim vlc keepass mplayer transmission libreoffice network-manager-applet git pcmanfm thunar gummi mupdf lxterminal rxvt-unicode htop nitrogen filezilla powerline tmux tmux-powerline evince gnome-boxes virt-manager 
+
+#vim-plugin-powerline
 
 # missing veracrypt youtube-dl claws-mail
 
