@@ -18,6 +18,9 @@ exec redshift -l 41.8:87.7 -t 5700:3600
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# check out `xmodmap` for list of key mappings of mod
+
 # alt key
 # set $mod Mod1
 # windows key

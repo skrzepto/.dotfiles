@@ -45,8 +45,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+plugins=(fedora git autopep8 command-not-found common-aliases cp copydir copyfile dnf docker extract history mosh pip pep8 python pylint ssh-agent supervisor taskwarrior systemd tmux)
+# plugins=(rust)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

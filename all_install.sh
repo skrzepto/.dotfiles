@@ -28,3 +28,8 @@ ln -s $(pwd)/vim/.vimrc $HOME/
 # soft link zshrc
 mv $HOME/.zshrc $HOME/.zshrc.bak
 ln -s $(pwd)/.zshrc $HOME/
+
+# soft link taskrc
+mkdir $HOME/.task
+mv $HOME/.taskrc $HOME/.taskrc.bak
+ln -s $(pwd)/.taskrc $HOME/
