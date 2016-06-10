@@ -99,9 +99,33 @@ $ git commit -c ORIG_HEAD                                   (5)
 5. Commit the changes, reusing the old commit message. reset copied the old head to .git/ORIG_HEAD; commit with -c ORIG_HEAD will open an editor, which initially contains the log message from the old commit and allows you to edit it. If you do not need to edit the message, you could use the -C option instead.
 
 #*misc*
+
 If you need to undo commit because you are on the wrong branch just stage changes and then
 ```
 git checkout theRightBranch
 ```
 
 src: http://stackoverflow.com/questions/927358/how-do-you-undo-the-last-commit/927386#927386
+
+-----
+
+# git ssh notes
+
+### Check existing ssh keys
+```
+ls -al ~/.ssh
+```
+
+### Generating new ssh key
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+src:https://help.github.com/articles/generating-an-ssh-key/
+
+### Copying ssh key to clipboard
+*assumption is that xclip is installed*
+
+```
+xclip -sel clip < ~/.ssh/id_rsa.pub
+```
