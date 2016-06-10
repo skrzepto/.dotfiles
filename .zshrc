@@ -84,5 +84,3 @@ source $ZSH/oh-my-zsh.sh
 
 alias gitsync="git fetch upstream ; git merge upstream/master"
 alias youtubemp3="youtube-dl -f bestaudio --audio-quality 0"
-
-. /usr/share/powerline/zsh/powerline.zsh
