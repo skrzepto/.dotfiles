@@ -182,7 +182,11 @@ bar {
     # i3bar position
     position bottom
     # Using custom i3status.conf
-    status_command i3status -c ~/.i3/i3status.conf
+    #feodra
+    status_command i3status -c ~/.config/i3/i3status.conf
+    # ubuntu
+    #status_command i3status -c ~/.i3/i3status.conf
+
 }
 
 
