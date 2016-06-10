@@ -5,15 +5,15 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# Config location
+# Fedora 23: ~/.config/i3/
+# Debian: ~/.i3
+
 # EXEC
 
-exec nm-applet
-
-exec --no-startup-id nitrogen --restore
-#exec feh --bg-scale /home/shims/Pictures/mtn/square-top-mountain-green-river-wyoming-244745.png
+# exec nm-applet
+# exec --no-startup-id nitrogen --restore
 exec redshift -l 41.8:87.7 -t 5700:3600
-#exec megasync
-exec SpiderOakONE
 
 # i3 config file (v4)
 #
@@ -37,11 +37,8 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec lxterminal
-
-#bindsym $mod+Return exec xterm -fg white -bg black #-ls -xrm ‘XTerm*selectToClipboard: true’
-bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
