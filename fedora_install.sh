@@ -38,7 +38,11 @@ sudo dnf install nose pylint
 sudo dnf install evolution mumble hexchat
 
 # media
-sudo dnf install youtube-dl  clementine vlc
+sudo dnf install youtube-dl  clementine vlc ffmpeg 
+# currently ffmpeg is not in f24 so get static binaries from home
+# https://ffmpeg.org/download.html
+#ln -s ~/Apps/ffmpeg-3.0.2-64bit-static/ffmpeg /bin
+#ln -s ~/Apps/ffmpeg-3.0.2-64bit-static/ffprobe /bin 
 echo "about to enable rpm-fusion"
 sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install mpv

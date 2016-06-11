@@ -82,4 +82,4 @@ source $ZSH/oh-my-zsh.sh
 # sync with salees repo
 
 alias gitsync="git fetch upstream ; git merge upstream/master"
-alias youtubemp3="youtube-dl -f bestaudio --audio-quality 0"
+alias youtubemp3="youtube-dl --extract-audio --audio-format mp3  --audio-quality  0"

@@ -17,6 +17,7 @@ mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 git config --global core.excludesfile dir/.gitignore_global
 
 # soft link i3 config
+mkdir $XDG_CONFIG_HOME/i3
 mv $XDG_CONFIG_HOME/i3/config $XDG_CONFIG_HOME/i3/config.bak
 ln -s $(pwd)/i3/config $XDG_CONFIG_HOME/i3/
 mv $XDG_CONFIG_HOME/i3/i3status.conf $XDG_CONFIG_HOME/i3/i3status.conf.bak
