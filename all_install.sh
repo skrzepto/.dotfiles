@@ -4,6 +4,11 @@
 # set defautl shell to zsh and install oh-my-zsh
 chsh -s /bin/zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+# if that doesn't work i will need to manually edit it using `vipw`
+# yourusername:x:1000:1000:optional full name here:/home/yourusername:/bin/zsh
+# notice at the end /bin/zsh is there
+
 echo "********************************"
 echo $(pwd)
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}

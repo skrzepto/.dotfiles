@@ -54,3 +54,6 @@ sudo dnf install keepass keepassx
 
 # misc
 sudo dnf install transmission shutter
+
+# F24 missing packages??? util-linux-user: for chsh
+sudo dnf install util-linux-user 
