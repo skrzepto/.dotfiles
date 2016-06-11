@@ -33,3 +33,8 @@ ln -s $(pwd)/.zshrc $HOME/
 mkdir $HOME/.task
 mv $HOME/.taskrc $HOME/.taskrc.bak
 ln -s $(pwd)/.taskrc $HOME/
+
+# GIT configuration
+git config --global user.name "skrzepto"
+git config --global user.email "shims506@gmail.com"
+
