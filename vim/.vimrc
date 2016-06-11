@@ -75,8 +75,8 @@ nnoremap <Leader>g :GundoToggle<CR>
 " Put your non-Plugin stuff after this line
 
 syntax enable
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr> 
 

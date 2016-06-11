@@ -31,6 +31,13 @@ ln -s $(pwd)/vim/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 mv $HOME/.vimrc $HOME/.vimrc.bak
 ln -s $(pwd)/vim/.vimrc $HOME/
 
+# pull vundle for nvim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim --cmd 'BundleInstall'
+
+# add solarized theme to vim
+#wget https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim -P ~/.vim/colors/
+
 # soft link zshrc
 mv $HOME/.zshrc $HOME/.zshrc.bak
 ln -s $(pwd)/.zshrc $HOME/
