@@ -33,7 +33,7 @@ ln -s $(pwd)/vim/.vimrc $HOME/
 
 # pull vundle for nvim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim --cmd 'BundleInstall'
+nvim -c BundleInstall -c q -c q
 
 # add solarized theme to vim
 #wget https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim -P ~/.vim/colors/
