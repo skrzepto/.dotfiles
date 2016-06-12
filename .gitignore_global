@@ -3,7 +3,7 @@
 
 # Jetbrains
 
-.idea/
+.idea/*
 
 ## Python
 # src: https://github.com/github/gitignore
