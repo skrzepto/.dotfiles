@@ -61,3 +61,8 @@ sudo dnf install transmission shutter
 
 # F24 missing packages??? util-linux-user: for chsh
 sudo dnf install util-linux-user 
+
+# F24 media apps missing get the unitedrpm
+# https://github.com/UnitedRPMs/unitedrpms.github.io
+# su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-1.noarch.rpm'
+
