@@ -11,9 +11,10 @@
 
 # EXEC
 
-# exec nm-applet
+exec nm-applet
 # exec --no-startup-id nitrogen --restore
-exec redshift -l 41.8:87.7 -t 5700:3600
+exec redshift -l 41.8:87.7 -b 1 -t 5800:3800
+exec syncthing
 
 # i3 config file (v4)
 #
@@ -198,4 +199,37 @@ bar {
 
 
 # toggle redshift
-bindsym $mod+Shift+s exec --no-startup-id pkill redshift || (redshift -l 44:26 -b 1 -t 5800:3800 &)
+bindsym $mod+Shift+s exec --no-startup-id pkill redshift || (redshift -l 41.8:87.7 -b 1 -t 5800:3800 &)
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
+# Touchpad controls
+bindsym XF86TouchpadToggle exec ~/scripts/toggletouchpad.sh # toggle touchpad
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+
+
+## Assign section
+# assign [class="^Firefox$"]      → $w1
+# assign [class="^Evolution$"]    → $w9
+
+# Adjust apps default behavior
+# for_window [title="hexchat"] move left; resize shrink right 31px or 31 ppt
+# for_window [class="vlc"] floating enable
+# resize 640 480
+#
+# The output is the name of the RandR output you attach your screen to. On a laptop, you might have VGA1 and LVDS1 as output names. You can see the available outputs by running xrandr --current.
+# If you use named workspaces, they must be quoted:
+# Examples:
+# workspace 1 output LVDS1
+# workspace 5 output VGA1
+# workspace "2: vim" output VGA1
+
+

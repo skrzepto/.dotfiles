@@ -51,3 +51,6 @@ ln -s $(pwd)/.taskrc $HOME/
 git config --global user.name "skrzepto"
 git config --global user.email "shims506@gmail.com"
 
+# My scripts folder
+echo 'y' | rm -r ~/scripts
+ln -s $(pwd)/scripts/ ~/
