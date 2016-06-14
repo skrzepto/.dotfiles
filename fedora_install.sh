@@ -38,7 +38,7 @@ sudo dnf install nose pylint
 sudo dnf install evolution mumble hexchat
 
 # media
-sudo dnf install youtube-dl  clementine vlc ffmpeg 
+sudo dnf install youtube-dl  clementine vlc ffmpeg gwenview 
 # currently ffmpeg is not in f24 so get static binaries from home
 # https://ffmpeg.org/download.html
 #ln -s ~/Apps/ffmpeg-3.0.2-64bit-static/ffmpeg /bin
