@@ -14,7 +14,7 @@
 exec nm-applet
 # exec --no-startup-id nitrogen --restore
 exec redshift -l 41.8:87.7 -b 1 -t 5800:3800
-exec syncthing
+exec syncthing -no-browser
 
 # i3 config file (v4)
 #
