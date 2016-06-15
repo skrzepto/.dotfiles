@@ -1,5 +1,7 @@
 ## Checkout all branches from remote as tracking branches. Based on    http://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches/6300386#6300386
 # usage `sh updateallbranches upstream origin`
+# src: http://stackoverflow.com/questions/15779740/how-to-update-my-fork-to-have-the-same-branches-and-tags-as-the-original-reposit/15781173#15781173
+
 UPSTREAM=$1
 MYREPO=$2
 
