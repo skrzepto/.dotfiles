@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # desktop / shell
-sudo dnf install zsh i3 i3status arandr redshift glances lxterminal htop
+sudo dnf install zsh i3 i3status i3lock arandr redshift glances lxterminal htop
 
 # system admin
 sudo dnf install supervisor xclip network-manager-applet
@@ -32,7 +32,7 @@ echo "copr enable dperson/neovim"
 sudo dnf copr enable -y dperson/neovim && sudo dnf install neovim
 
 # python dev tools
-sudo dnf install nose pylint
+sudo dnf install python-nose pylint python-coverage python-virtualenvwrapper
 
 # communication
 sudo dnf install evolution mumble hexchat
