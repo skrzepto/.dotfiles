@@ -73,7 +73,12 @@ nnoremap <Leader>g :GundoToggle<CR>
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
+Bundle 'https://github.com/freeo/vim-kalisi'
+set t_Co=256
+colorscheme kalisi
+" set background=light
+set background=dark
+" if you don't set the background, the light theme will be used
 syntax enable
 " set background=dark
 " colorscheme solarized
