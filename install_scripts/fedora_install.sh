@@ -4,7 +4,7 @@
 sudo dnf install zsh i3 i3status i3lock arandr redshift glances lxterminal htop
 
 # system admin
-sudo dnf install supervisor xclip network-manager-applet
+sudo dnf install supervisor xclip network-manager-applet pavucontrol
 
 # file explorer / archival / cloud
 sudo dnf install pcmanfm thunar file-roller
