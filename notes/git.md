@@ -107,6 +107,23 @@ git checkout theRightBranch
 
 src: http://stackoverflow.com/questions/927358/how-do-you-undo-the-last-commit/927386#927386
 
+
+### git log shortned
+
+```
+$ git log --oneline
+1333bca Updates Atom feed
+9b8fae0 Fixes feed
+38eef03 Adds tags insted of markdown
+de53e1f Changes in License
+```
+
+### reset a certain file to a specific commit
+
+```
+$ git checkout de53e1f <file/name>
+```
+or you can replace <file/name> to `.` so everything is reset to that commit
 -----
 
 # git ssh notes
