@@ -30,8 +30,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
-" Plugin 'altercation/vim-colors-solarized'
-" Plugin 'ervandew/supertab'
+Plugin 'airblade/vim-gitgutter'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
 Plugin 'klen/python-mode'
@@ -48,11 +47,40 @@ Plugin 'sjl/gundo.vim'
 " Adds new operator 'gc' for easy commenting in many languages
 Plugin 'tpope/vim-commentary'
 
+" Autocomplete for python
+Plugin 'davidhalter/jedi-vim'
+
+" Tab completion
+Plugin 'ervandew/supertab'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
+
+""""""" Jedi-VIM """""""
+" Don't mess up undo history
+let g:jedi#show_call_signatures = "0"
+
+
+""""""" SuperTab configuration """""""
+"let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+function! Completefunc(findstart, base)
+    return "\<c-x>\<c-p>"
+endfunction
+
+"call SuperTabChain(Completefunc, '<c-n>')
+
+"let g:SuperTabCompletionContexts = ['g:ContextText2']
+
+""""""" Python stuff """""""
+syntax enable
+set number showmatch
+set shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
+let python_highlight_all = 1
+
 
 " Setting the leader to space
 let mapleader = " "
