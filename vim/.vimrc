@@ -85,3 +85,6 @@ syntax enable
 
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr> 
 
+set number                     " Show current line number
+set relativenumber             " Show relative line numbers
+

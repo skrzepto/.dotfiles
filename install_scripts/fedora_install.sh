@@ -23,7 +23,7 @@ sudo  dnf copr enable -y pkerling/seafile  && sudo dnf install seafile-client-qt
 sudo dnf install task
 
 # dev tools
-sudo dnf install filezilla tmux git sqlitebrowser httpie
+sudo dnf install filezilla tmux git sqlitebrowser httpie dia
 echo "copr enable phracek/PyCharm"
 sudo dnf copr enable -y phracek/PyCharm && sudo dnf install pycharm-community
 echo "copr enable helber/atom"
