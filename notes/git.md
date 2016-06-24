@@ -124,6 +124,13 @@ de53e1f Changes in License
 $ git checkout de53e1f <file/name>
 ```
 or you can replace <file/name> to `.` so everything is reset to that commit
+
+### find all authors of the file and what they modified
+
+```
+git blame <filename>
+```
+
 -----
 
 # git ssh notes
