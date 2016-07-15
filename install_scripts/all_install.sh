@@ -43,6 +43,7 @@ ln -s $dir/.zshrc $HOME/
 # soft link atom package.cson
 ln -s $dir/atom/packages.cson $HOME/.atom/packages.cson
 apm install 'package-sync'
+apm install --packages-file $dir/atom/package-list.txt
 
 # soft link taskrc
 mkdir $HOME/.task
