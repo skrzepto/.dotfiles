@@ -40,6 +40,10 @@ nvim -c BundleInstall -c q -c q
 mv $HOME/.zshrc $HOME/.zshrc.bak
 ln -s $dir/.zshrc $HOME/
 
+# soft link atom package.cson
+ln -s $dir/atom/packages.cson $HOME/.atom/packages.cson
+apm install 'package-sync'
+
 # soft link taskrc
 mkdir $HOME/.task
 mv $HOME/.taskrc $HOME/.taskrc.bak
