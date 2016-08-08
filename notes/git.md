@@ -131,6 +131,12 @@ or you can replace <file/name> to `.` so everything is reset to that commit
 git blame <filename>
 ```
 
+### applying a patch
+```
+git commit ... && git format-patch -2 (-2 == last 2 commit)
+```
+then fpaste 000* :)
+
 -----
 
 # git ssh notes
