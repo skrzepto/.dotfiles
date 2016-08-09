@@ -16,3 +16,9 @@ once logged in
 \connect <db_name>
 ```
 
+
+## Drop DB
+*not connected to the db and no other db connected*
+```
+drop database <db_name>
+```
