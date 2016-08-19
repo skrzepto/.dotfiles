@@ -10,6 +10,13 @@ sudo -u postgres psql
 ```
 
 
+## Create DB
+once logged in
+```
+CREATE DATABASE <db_name>;
+```
+
+
 ## Connect to DB
 once logged in
 ```
