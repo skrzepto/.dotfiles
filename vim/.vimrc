@@ -12,28 +12,27 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
+
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
-Plugin 'Lokaltog/powerline'
+" Plugin 'tpope/vim-fugitive'
+
+" syntax checker
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-sensible'
+
+" add delimeters to selected text
 Plugin 'tpope/vim-surround'
+
+" ui bar at the bottom
 Plugin 'bling/vim-airline'
+
+" shows which lines are added/removed/edited in git tree
 Plugin 'airblade/vim-gitgutter'
-" Plugin 'Valloric/YouCompleteMe'
+
+" basic ide funcitonality as you type
+Plugin 'Valloric/YouCompleteMe'
+
+" Automatically add closing of delimeters
 Plugin 'Raimondi/delimitMate'
-Plugin 'klen/python-mode'
 
 " A much faster replacement for 99% of the uses of grep
 Plugin 'rking/ag.vim'
@@ -48,11 +47,10 @@ Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-commentary'
 
 " Autocomplete for python
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'"
 
 " Tab completion
-Plugin 'ervandew/supertab'
-
+" Plugin 'ervandew/supertab'"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,20 +58,19 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
-""""""" Jedi-VIM """""""
-" Don't mess up undo history
-let g:jedi#show_call_signatures = "0"
+" """"" Jedi-VIM """""
+" " Don't mess up undo history
+" let g:jedi#show_call_signatures = "0"
 
+" """"" SuperTab configuration """""
+" let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+" function! Completefunc(findstart, base)
+"     return "\<c-x>\<c-p>"
+" endfunction
 
-""""""" SuperTab configuration """""""
-"let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-function! Completefunc(findstart, base)
-    return "\<c-x>\<c-p>"
-endfunction
+" call SuperTabChain(Completefunc, '<c-n>')
 
-"call SuperTabChain(Completefunc, '<c-n>')
-
-"let g:SuperTabCompletionContexts = ['g:ContextText2']
+" let g:SuperTabCompletionContexts = ['g:ContextText2']
 
 """"""" Python stuff """""""
 syntax enable
@@ -84,9 +81,6 @@ let python_highlight_all = 1
 
 " Setting the leader to space
 let mapleader = " "
-
-
-let g:pymode_rope=0
 
 " Useful shortcuts with leader
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -116,3 +110,5 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 set number                     " Show current line number
 set relativenumber             " Show relative line numbers
 
+" allow airline to turn on
+set laststatus=2
