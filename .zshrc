@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias gitsync="git fetch upstream ; git merge upstream/master"
 alias youtubemp3="youtube-dl --extract-audio --audio-format mp3  --audio-quality  0 -i"
-alias vim="nvim"
-alias vi="nvim"
+# alias vim="nvim"
+# alias vi="nvim"
+alias copy-text="xclip -sel clip <"
 
