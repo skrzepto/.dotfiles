@@ -12,9 +12,10 @@
 # EXEC
 
 exec nm-applet
+exec insync start
 # exec --no-startup-id nitrogen --restore
 exec redshift -l 41.8:87.7 -b 1 -t 5800:3800
-exec syncthing -no-browser
+# exec syncthing -no-browser
 
 # i3 config file (v4)
 #
@@ -43,9 +44,9 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+#bindsym $mod+Return exec gnome-terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec lxterminal
+bindsym $mod+Return exec lxterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -190,10 +191,10 @@ bar {
     position bottom
     # Using custom i3status.conf
     #feodra
-    status_command i3status -c ~/.config/i3/i3status.conf
+    #status_command i3status -c ~/.config/i3/i3status.conf
     # ubuntu
     #status_command i3status -c ~/.i3/i3status.conf
-
+    status_command i3status
 }
 
 
@@ -202,8 +203,8 @@ bar {
 bindsym $mod+Shift+s exec --no-startup-id pkill redshift || (redshift -l 41.8:87.7 -b 1 -t 5800:3800 &)
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec ~/scripts/toggletouchpad.sh # toggle touchpad
