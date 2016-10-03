@@ -29,7 +29,7 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 
 " basic ide funcitonality as you type
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Automatically add closing of delimeters
 Plugin 'Raimondi/delimitMate'
