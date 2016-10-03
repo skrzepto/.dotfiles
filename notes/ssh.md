@@ -22,3 +22,10 @@ Host github.com
 `chmod 400 ~/.ssh/id_rsa `
 
 http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+
+### copying keys to ssh server
+```
+scp -P <PORT> -i <PRIVATE_KEY> ~/.ssh/id_rsa.pub user@remote.example.com:/tmp/id_rsa.pub
+ssh user@remote.example.com 
+cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
+```
