@@ -137,6 +137,12 @@ git commit ... && git format-patch -2 (-2 == last 2 commit)
 ```
 then fpaste 000* :)
 
+
+
+### Deleting local and remote branch
+```
+git push origin --delete <BRANCH_NAME>
+```
 -----
 
 # git ssh notes
