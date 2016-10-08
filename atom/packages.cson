@@ -32,7 +32,6 @@ packages: [
   "python-indent"
   "python-tools"
   "racer"
-  "remote-edit"
   "rust-api-docs-helper"
   "seti-ui"
   "Sublime-Style-Column-Selection"

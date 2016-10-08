@@ -33,7 +33,6 @@ python-debugger
 python-indent
 python-tools
 racer
-remote-edit
 rust-api-docs-helper
 seti-ui
 todo-show
