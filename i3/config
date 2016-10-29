@@ -1,6 +1,4 @@
-# Config location
-# Fedora 23: ~/.config/i3/
-# Debian: ~/.i3
+# Config sym link location  ~/.config/i3/
 
 ######### Set Mod Key #########
 
@@ -9,6 +7,7 @@
 # windows key
 set $mod Mod4
 
+
 ######## Startup Applications ########
 
 exec nm-applet  # network applet
@@ -16,6 +15,7 @@ exec insync start  # gdrive sync
 # exec --no-startup-id nitrogen --restore  # wallpaper
 exec redshift -l 41.8:87.7 -b 1 -t 5800:3800  # save my eyes
 # exec syncthing -no-browser  # syncing client
+
 
 ######## Look and Feel #########
 
@@ -47,6 +47,40 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Set Colors
+set $foreground #323641
+set $background #000000
+set $selected #5294e2
+set $text #525d76
+set $grey #9299a4
+set $white #ffffff
+set $red #dc322f
+
+# Window colors:
+# colorclass            border      bckgrnd     text   indicator
+client.focused          $selected   $selected   $white $grey
+client.focused_inactive $selected   $selected   $text  $grey
+client.unfocused        $background $background $text  $grey
+
+bar {
+    status_command i3blocks #-c ~/.config/i3/i3blocks.conf
+    # status_command i3status -c ~/.config/i3/i3status.conf
+    position bottom
+    mode hide  # press $mod to show the bar
+    # tray_output none
+    colors {
+        separator  $background
+        background $background
+        statusline $white
+        # colorclass        border      bckgrnd     text
+        focused_workspace   $selected   $selected   $white
+        active_workspace    $selected   $selected   $text
+        inactive_workspace  $background $background $text
+        urgent_workspace    $red        $red        $white
+    }
+}
+
+
 ######### App bindings #########
 
 set $filemanager nemo --no-desktop
@@ -57,6 +91,7 @@ set $terminal terminator
 bindsym $mod+z exec $browser
 bindsym $mod+x exec $filemanager
 bindsym $mod+Return exec i3-sensible-terminal
+
 
 ######## Commands #########
 
@@ -129,7 +164,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec ~/scripts/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec ~/scripts/i3/toggletouchpad.sh
+
+# Lock screen
+bindsym $mod+Ctrl+l exec ~/scripts/i3/blurred-lock.sh
 
 #### Workspaces ####
 
@@ -158,8 +196,6 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 
-
-
 ######## Volume / Media #########
 
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3%-
@@ -182,32 +218,4 @@ bindsym $mod+Shift+s exec --no-startup-id pkill redshift || (redshift -l 41.8:87
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
-
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-    #colors {
-    #    # Whole color settings
-    #    background #000000
-    #    statusline #ffffff
-    #    separator  #666666
-
-    #    # Type             border  background font
-    #    focused_workspace  #008fff #007fff #ffffff
-    #    active_workspace   #333333 #5f676a #ffffff
-    #    inactive_workspace #333333 #222222 #888888
-    #    urgent_workspace   #aa0000 #990000 #ffffff
-    #}
-    ## i3bar position
-    #position bottom
-    ## Using custom i3status.conf
-    ##feodra
-    ##status_command i3status -c ~/.config/i3/i3status.conf
-    ## ubuntu
-    ##status_command i3status -c ~/.i3/i3status.conf
-    # status_command i3status
-    status_command i3blocks
-}
-
 
