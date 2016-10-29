@@ -1,9 +1,8 @@
 packages: [
   "atom-beautify"
-  "atom-language-rust"
+  /* "atom-language-rust" */
   "atom-material-syntax"
   "atom-material-ui"
-  "atom-python-run"
   "autocomplete-go"
   "autocomplete-paths"
   "autocomplete-python"
@@ -17,10 +16,10 @@ packages: [
   "go-get"
   "highlight-line"
   "highlight-selected"
-  "language-rust"
+  /* "language-rust" */
   "linter"
-  "linter-python-pep8"
-  "linter-rust"
+  /* "linter-python-pep8" */
+  /* "linter-rust" */
   "merge-conflicts"
   "minimap"
   "minimap-cursorline"
@@ -31,8 +30,8 @@ packages: [
   "python-debugger"
   "python-indent"
   "python-tools"
-  "racer"
-  "rust-api-docs-helper"
+  /* "racer" */
+  /* "rust-api-docs-helper" */
   "seti-ui"
   "Sublime-Style-Column-Selection"
   "todo-show"
