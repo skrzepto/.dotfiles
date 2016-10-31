@@ -85,12 +85,13 @@ bar {
 
 set $filemanager nemo --no-desktop
 set $browser google-chrome
-set $terminal terminator
+set $terminal lxterminal
 
 ## favorite programs
 bindsym $mod+z exec $browser
 bindsym $mod+x exec $filemanager
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym Print exec scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png
 
 
 ######## Commands #########
