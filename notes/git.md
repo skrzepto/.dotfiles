@@ -1,5 +1,12 @@
 ## git cmds that i frequently use
 
+### undo merge from `git pull`
+
+```
+git reset --merge ORIG_HEAD
+git pull --rebase
+```
+
 ### Squashing your last commits
 
 
