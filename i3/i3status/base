@@ -67,7 +67,7 @@ cpu_temperature 0 {
   format = "T: %degrees °C"
 }
 
-# order += "cpu_temperature 0"
+order += "cpu_temperature 0"
 #order += "ipv6"
 order += "disk /root"
 # order += "run_watch DHCP"
