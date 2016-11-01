@@ -8,34 +8,33 @@
 I3_CONFIG_ROOT="$HOME/.config/i3"
 DOT_ROOT="$HOME/.dotfiles/i3"
 
-FULLNAME=$(echo $HOST | cut -f1 -d".")
-NAME=$(echo $HOST | cut -f1 -d"-")
-
-
+THISHOST=$(hostname -f) 
+NAME=$(echo $THISHOST | cut -f1 -d"-")
+ROLES=()
 ######## CONFIG ########
 # remove the old config. 
-mv $DOT_ROOT/config /tmp/i3-config.bak
+mv $I3_CONFIG_ROOT/config /tmp/i3-config.bak
 
 # generate new config
-cp $DOT_ROOT/config/base $I3_CONFIG_ROOT/config
+cp $DOT_ROOT/i3config/base $I3_CONFIG_ROOT/config
 
 # Append Module specific configs
-roles=($NAME)  #(laptop) or (desktop)
-for role in $roles; do
-    cat $DOT_ROOT/config/$role >> $I3_CONFIG_ROOT/config
+ROLES+=("$NAME")
+# (laptop) or (desktop)
+for role in $ROLES; do
+    cat $DOT_ROOT/i3config/$role >> $I3_CONFIG_ROOT/config
 done
 
 
 ######## i3STATUS ########
 # remove the old config. 
-mv $DOT_ROOT/i3status.conf /tmp/i3status.conf.bak
+mv $I3_CONFIG_ROOT/i3status.conf /tmp/i3status.conf.bak
 
 # generate new config
 cp $DOT_ROOT/i3status/base $I3_CONFIG_ROOT/i3status.conf
 
 # Append Module specific configs
-roles=($NAME)  #(laptop) or (desktop)
-for role in $roles; do
+for role in $ROLES; do
     cat $DOT_ROOT/i3status/$role >> $I3_CONFIG_ROOT/i3status.conf
 done
 
