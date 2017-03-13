@@ -1,4 +1,4 @@
-# git config --global core.excludesfile ~/Documents/dotfiles/git/.gitignore
+# git config --global core.excludesfile ~/Documents/dotfiles/.gitignore_global
 
 
 # Jetbrains
