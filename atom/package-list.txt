@@ -27,7 +27,6 @@ minimap
 minimap-cursorline
 minimap-highlight-selected
 open-recent
-package-sync
 pigments
 python-debugger
 python-indent
