@@ -50,8 +50,9 @@ plugins=(fedora git autopep8 command-not-found common-aliases cp copydir copyfil
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -87,3 +88,6 @@ alias youtubemp3="youtube-dl --extract-audio --audio-format mp3  --audio-quality
 # alias vi="nvim"
 alias copy-text="xclip -sel clip <"
 
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualwrapper/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh

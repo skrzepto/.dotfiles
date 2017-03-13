@@ -1,5 +1,12 @@
 ## git cmds that i frequently use
 
+### undo merge from `git pull`
+
+```
+git reset --merge ORIG_HEAD
+git pull --rebase
+```
+
 ### Squashing your last commits
 
 
@@ -151,6 +158,13 @@ git push origin --delete <BRANCH_NAME>
 ```
 ls -al ~/.ssh
 ```
+
+### Replace local branch with specified branch
+
+```
+git reset --hard origin/master
+```
+The current branch will be replaced to what origin/master is
 
 ### Generating new ssh key
 

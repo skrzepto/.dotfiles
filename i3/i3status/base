@@ -8,19 +8,14 @@
 
 general {
         colors = true
-        interval = 5
+        interval = 15
 }
 
-#order += "ipv6"
-order += "disk /root"
-order += "run_watch DHCP"
-order += "run_watch VPN"
-order += "wireless wlp4s0"
-order += "ethernet enp3s0"
-#order += "battery 0"
-#order += "load"
-order += "tztime local"
-order += "volume master"
+wireless wlan0 {
+        # format_up = "W: (%quality at %essid, %bitrate) %ip"
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
 
 wireless wlp4s0 {
         format_up = "W: (%quality at %essid) %ip"
@@ -35,7 +30,7 @@ ethernet enp3s0 {
 
 battery 0 {
         format = "%status %percentage %remaining"
-        path = "/sys/class/power_supply/BAT1/uevent"
+        # path = "/sys/class/power_supply/BAT1/uevent"
 }
 
 run_watch DHCP {
@@ -50,12 +45,15 @@ tztime local {
         format = "%Y-%m-%d %H:%M:%S"
 }
 
-#load {
-#        format = "%1min"
-#}
+load {
+       format = "LOAD: %1min"
+}
 
+cpu_usage {
+        format = "CPU: %usage"
+}
 disk "/root" {
-        format = "%free"
+        format = "DISK: %free"
 }
 
 volume master {
@@ -64,3 +62,22 @@ volume master {
    mixer = "Master"
    mixer_idx = 0
 }
+
+cpu_temperature 0 {
+  format = "T: %degrees °C"
+}
+
+order += "cpu_temperature 0"
+#order += "ipv6"
+order += "disk /root"
+# order += "run_watch DHCP"
+# order += "run_watch VPN"
+# order += "wireless wlp4s0"
+order += "wireless wlan0"
+order += "ethernet enp3s0"
+# order += "load"
+order += "cpu_usage"
+order += "tztime local"
+order += "volume master"
+# order += "battery 0"
+
