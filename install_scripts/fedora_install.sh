@@ -16,11 +16,8 @@ sudo  dnf copr enable -y pkerling/seafile  && sudo dnf install seafile-client-qt
 # duplicati
 
 # file encryption
-# veracrypt
-# cryptomator
+# gocrypt cryfs veracrypt encfs
 
-# taskwarrior
-sudo dnf install task
 
 # dev tools
 sudo dnf install filezilla tmux git sqlitebrowser httpie dia
@@ -38,11 +35,7 @@ sudo dnf install python-nose pylint python-coverage python-virtualenvwrapper
 sudo dnf install evolution mumble hexchat
 
 # media
-sudo dnf install youtube-dl  clementine vlc ffmpeg gwenview 
-# currently ffmpeg is not in f24 so get static binaries from home
-# https://ffmpeg.org/download.html
-#ln -s ~/Apps/ffmpeg-3.0.2-64bit-static/ffmpeg /bin
-#ln -s ~/Apps/ffmpeg-3.0.2-64bit-static/ffprobe /bin 
+sudo dnf install youtube-dl  clementine vlc ffmpeg gwenview
 echo "about to enable rpm-fusion"
 sudo dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install mpv
@@ -54,21 +47,16 @@ sudo dnf install libreoffice gummi mupdf evince
 sudo dnf install firefox midori google-chrome lynx
 
 # password managers
-sudo dnf install keepass keepassx
+sudo dnf install keepassx
 
 # misc
 sudo dnf install transmission shutter
 
 # F24 missing packages??? util-linux-user: for chsh
-sudo dnf install util-linux-user 
-
-# F24 media apps missing get the unitedrpm
-# https://github.com/UnitedRPMs/unitedrpms.github.io
-# su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-1.noarch.rpm'
+sudo dnf install util-linux-user
 
 # setup rpmfusion
  su -c 'dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
 # install required packages for gnome
 sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
-
