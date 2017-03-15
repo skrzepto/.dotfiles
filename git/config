@@ -1,0 +1,22 @@
+[user]
+	name = Simon Mucha
+	email = shims506@gmail.com
+
+[push]
+	default = simple
+
+[core]
+	editor = vim
+	excludesfile = ~/.dotfiles/git/gitignore
+
+[branch]
+	autosetupmerge = true
+
+[diff]
+	tool = vimdiff
+
+[grep]
+	lineNumber = true
+
+[web]
+	browser = firefox
