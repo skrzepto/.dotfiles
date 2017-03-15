@@ -24,15 +24,13 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 alias gitsync="git fetch upstream ; git merge upstream/master"
 alias youtubemp3="youtube-dl --extract-audio --audio-format mp3  --audio-quality  0 -i"
 alias copy-text="xclip -sel clip <"
+alias pycclean='find . -name "*.pyc" -exec rm {} \; && find . -name "__pycache__" -exec rm -rf {} \;'
 
-# Python
 # export WORKON_HOME=$HOME/.virtualenvs
 # export VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualwrapper/virtualenvwrapper.sh
 # source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-alias pycclean='find . -name "*.pyc" -exec rm {} \; && find . -name "__pycache__" -exec rm -rf {} \;'
 
 # Functions
-
 extract () {
     if [ -f $1 ] ; then
         case $1 in
@@ -70,4 +68,8 @@ fi
 local_ips () {
     # determine local IP address
     ifconfig | grep "inet " | awk '{ print $2 }'
+}
+
+shell () {
+  ps | grep `echo $$` | awk '{ print $4 }'
 }
