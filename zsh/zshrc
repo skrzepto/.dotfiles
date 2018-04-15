@@ -14,7 +14,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git command-not-found common-aliases cp copydir copyfile docker extract history mosh ssh-agent systemd tmux)
+plugins=(gitfast git-extras mvn tmux taskwarrior python pyenv)
 
 # User configuration
 source $ZSH/oh-my-zsh.sh
@@ -25,10 +25,6 @@ alias gitsync="git fetch upstream ; git merge upstream/master"
 alias youtubemp3="youtube-dl --extract-audio --audio-format mp3  --audio-quality  0 -i"
 alias copy-text="xclip -sel clip <"
 alias pycclean='find . -name "*.pyc" -exec rm {} \; && find . -name "__pycache__" -exec rm -rf {} \;'
-
-# export WORKON_HOME=$HOME/.virtualenvs
-# export VIRTUALENVWRAPPER_SCRIPT=/usr/share/virtualwrapper/virtualenvwrapper.sh
-# source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # Functions
 extract () {
