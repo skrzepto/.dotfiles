@@ -11,9 +11,11 @@ set $mod Mod4
 
 ######## Startup Applications ########
 
-exec nm-applet
-exec redshift-gtk --no-startup-id
-
+exec --no-startup-id nm-applet
+exec --no-startup-id redshift-gtk
+exec --no-startup-id syncthing-gtk
+exec --no-startup-id flameshot
+exec --no-startup-id shutter
 
 ######## Look and Feel #########
 
@@ -84,6 +86,7 @@ bar {
 set $filemanager thunar
 set $browser firefox
 set $terminal gnome-terminal
+# set $terminal alacritty
 
 ## favorite programs
 bindsym $mod+z exec $browser
@@ -165,6 +168,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Touchpad controls
 bindsym XF86TouchpadToggle exec ~/.dotfiles/scripts/i3/toggletouchpad.sh
 
+# Change video output to laptop screen
+bindsym $mod+Shift+t exec ~/.screenlayout/laptop.sh
+
 # Lock screen
 bindsym $mod+Ctrl+l exec ~/.dotfiles/scripts/i3/blurred-lock.sh
 
@@ -176,9 +182,9 @@ set $tag3 "3: term"
 set $tag4 "4: git"
 set $tag5 "5: python"
 set $tag6 "6: misc"
-set $tag7 "6: misc"
-set $tag8 "6: misc"
-set $tag9 "6: misc"
+set $tag7 "7: misc"
+set $tag8 "8: misc"
+set $tag9 "9: misc"
 set $tag0 "0: background"
 
 
@@ -226,3 +232,6 @@ bindsym XF86AudioPrev exec cmus-remote -r
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+
+# Floating windows on all workspaces
+bindsym $mod+Shift+w sticky toggle

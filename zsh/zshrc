@@ -19,12 +19,21 @@ plugins=(gitfast git-extras mvn tmux taskwarrior python pyenv)
 # User configuration
 source $ZSH/oh-my-zsh.sh
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOBIN
+
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:jre/bin/java::")
+export PATH=$JAVA_HOME/bin:$PATH
+export CARGO=$HOME/.cargo
+export PATH=$PATH:$CARGO/bin
 
 alias gitsync="git fetch upstream ; git merge upstream/master"
-alias youtubemp3="youtube-dl --extract-audio --audio-format mp3  --audio-quality  0 -i"
+alias youtubemp3="youtube-dl -f bestaudio --external-downloader aria2c --extract-audio --audio-format mp3  --audio-quality  0 -i"
 alias copy-text="xclip -sel clip <"
 alias pycclean='find . -name "*.pyc" -exec rm {} \; && find . -name "__pycache__" -exec rm -rf {} \;'
+alias extract-all-logs="find . -name '*tar.gz' -exec tar -xvzf {} \;"
+alias redshift_chicago="redshift -l 41.9:87.6 -t 5700:3600 -g 0.8 -m randr -v"
+alias download-logs="wget -r -nH -np --cut-dirs=1 --no-check-certificate -U Mozilla"
 
 # Functions
 extract () {
@@ -69,3 +78,12 @@ local_ips () {
 shell () {
   ps | grep `echo $$` | awk '{ print $4 }'
 }
+
+
+# Sync cleverkit with initiator
+# $1 is local directory path
+# $2 is ip of initiator
+sync-cleverkit () {
+    rsync -rvz --exclude "sandbox/*" --exclude="jetengine/var/" --exclude="*.pyc" --exclude="*.git/*" --exclude="var/*" $1 $2:~/cleverkit/
+}
+
