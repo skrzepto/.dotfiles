@@ -16,6 +16,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id syncthing-gtk
 exec --no-startup-id flameshot
 exec --no-startup-id shutter
+exec --no-startup-id safeeyes
 
 ######## Look and Feel #########
 
@@ -85,8 +86,8 @@ bar {
 
 set $filemanager thunar
 set $browser firefox
-set $terminal gnome-terminal
-# set $terminal alacritty
+# set $terminal gnome-terminal
+set $terminal alacritty
 
 ## favorite programs
 bindsym $mod+z exec $browser
