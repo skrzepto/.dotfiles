@@ -17,6 +17,7 @@ exec --no-startup-id syncthing-gtk
 exec --no-startup-id flameshot
 exec --no-startup-id shutter
 exec --no-startup-id safeeyes
+exec --no-startup-id copyq
 
 ######## Look and Feel #########
 
