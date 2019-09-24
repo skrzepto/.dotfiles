@@ -2,11 +2,12 @@
 
 ######### Set Mod Key #########
 
+# Use this for mac
 # alt key
-# set $mod Mod1
+set $mod Mod1
 
 # windows key
-set $mod Mod4
+#set $mod Mod4
 
 
 ######## Startup Applications ########
@@ -19,6 +20,8 @@ exec --no-startup-id shutter
 exec --no-startup-id safeeyes
 exec --no-startup-id copyq
 
+# Mac specifc Parallels virtualization
+exec --no-startup-id prlcc
 ######## Look and Feel #########
 
 font pango:DejaVu Sans Mono 8
@@ -68,7 +71,7 @@ bar {
     # status_command i3blocks #-c ~/.config/i3/i3blocks.conf
     status_command i3status -c ~/.config/i3/i3status.conf
     position bottom
-    mode hide  # press $mod to show the bar
+    #mode hide  # press $mod to show the bar
     # tray_output none
     colors {
         separator  $background
@@ -87,8 +90,8 @@ bar {
 
 set $filemanager thunar
 set $browser firefox
-# set $terminal gnome-terminal
-set $terminal alacritty
+set $terminal gnome-terminal
+# set $terminal alacritty
 
 ## favorite programs
 bindsym $mod+z exec $browser
