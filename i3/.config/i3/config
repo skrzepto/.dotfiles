@@ -10,6 +10,19 @@
 set $mod Mod4
 
 
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 8
+
+# GET DEM BORDERS OUT OF HEREc:w
+#
+# Thanks Childz
+for_window [class="^.*"] border pixel 2
+                          # class                 border  backgr. text    indicator child_border
+for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+
+
+
 ######## Startup Applications ########
 
 exec --no-startup-id nm-applet
@@ -34,10 +47,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow width 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow height 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -52,45 +65,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Set Colors
-set $foreground #323641
-set $background #000000
-set $selected #5294e2
-set $text #525d76
-set $grey #9299a4
-set $white #ffffff
-set $red #dc322f
-
-# Window colors:
-# colorclass            border      bckgrnd     text   indicator
-client.focused          $selected   $selected   $white $grey
-client.focused_inactive $selected   $selected   $text  $grey
-client.unfocused        $background $background $text  $grey
-
 bar {
-    # status_command i3blocks #-c ~/.config/i3/i3blocks.conf
-    status_command i3status -c ~/.config/i3satus/config
-    position bottom
-    #mode hide  # press $mod to show the bar
-    # tray_output none
-    colors {
-        separator  $background
-        background $background
-        statusline $white
-        # colorclass        border      bckgrnd     text
-        focused_workspace   $selected   $selected   $white
-        active_workspace    $selected   $selected   $text
-        inactive_workspace  $background $background $text
-        urgent_workspace    $red        $red        $white
-    }
+        status_command i3status
+        tray_output primary
 }
-
 
 ######### App bindings #########
 
 set $filemanager thunar
 set $browser firefox
-set $terminal gnome-terminal
+set $terminal i3-sensible-terminal
 # set $terminal alacritty
 
 ## favorite programs
@@ -170,14 +154,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec ~/.dotfiles/scripts/i3/toggletouchpad.sh
-
-# Change video output to laptop screen
-bindsym $mod+Shift+t exec ~/.screenlayout/laptop.sh
 
 # Lock screen
-bindsym $mod+Ctrl+l exec ~/.dotfiles/scripts/i3/blurred-lock.sh
+bindsym $mod+Escape exec ~/.dotfiles/scripts/i3/blurred-lock.sh
 
 #### Workspaces ####
 # Name the workspaces
@@ -224,12 +203,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 3%+
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
-# Media player controls
-# bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle" # UNABLE TO UNMUTE
-bindsym XF86AudioPlay exec cmus-remote -u
-bindsym XF86AudioPause exec cmus-remote -u
-bindsym XF86AudioNext exec cmus-remote -n
-bindsym XF86AudioPrev exec cmus-remote -r
 
 
 ######### Brightnesss #########
