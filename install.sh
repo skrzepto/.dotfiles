@@ -10,3 +10,5 @@ do
     stow $folder
 done
 popd
+
+sudo ln -nsf $DOTFILES/git/config $HOME/.gitconfig
