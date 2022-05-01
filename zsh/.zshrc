@@ -31,9 +31,13 @@ alias gitsync="git fetch upstream ; git merge upstream/master"
 alias youtubemp3="youtube-dl -f bestaudio --external-downloader aria2c --extract-audio --audio-format mp3  --audio-quality  0 -i"
 alias copy-text="xclip -sel clip <"
 alias pycclean='find . -name "*.pyc" -exec rm {} \; && find . -name "__pycache__" -exec rm -rf {} \;'
-alias extract-all-logs="find . -name '*tar.gz' -exec tar -xvzf {} \;"
 alias redshift_chicago="redshift -l 41.9:87.6 -t 5700:3600 -g 0.8 -m randr -v"
 alias download-logs="wget -r -nH -np --cut-dirs=1 --no-check-certificate -U Mozilla"
+
+alias killBT="rfkill block bluetooth"
+alias unKillBT="rfkill unblock bluetooth"
+alias cclip="xclip -selection clipboard"
+alias pclip="xclip -selection clipboard"
 
 # Functions
 extract () {
@@ -87,3 +91,4 @@ sync-cleverkit () {
     rsync -rvz --exclude "sandbox/*" --exclude="jetengine/var/" --exclude="*.pyc" --exclude="*.git/*" --exclude="var/*" $1 $2:~/cleverkit/
 }
 
+source ~/.zsh_profile

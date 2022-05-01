@@ -74,8 +74,8 @@ bar {
 
 set $filemanager thunar
 set $browser firefox
-set $terminal i3-sensible-terminal
-# set $terminal alacritty
+#set $terminal i3-sensible-terminal
+set $terminal alacritty
 
 ## favorite programs
 bindsym $mod+z exec $browser
