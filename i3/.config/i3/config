@@ -208,8 +208,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 ######### Brightnesss #########
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Floating windows on all workspaces
 bindsym $mod+Shift+w sticky toggle
