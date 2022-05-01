@@ -14,11 +14,11 @@ set $mod Mod4
 
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift-gtk
-exec --no-startup-id syncthing-gtk
-exec --no-startup-id flameshot
-exec --no-startup-id shutter
+#exec --no-startup-id syncthing-gtk
+#exec --no-startup-id flameshot
+#exec --no-startup-id shutter
 exec --no-startup-id safeeyes
-exec --no-startup-id copyq
+#exec --no-startup-id copyq
 
 # Mac specifc Parallels virtualization
 exec --no-startup-id prlcc
@@ -69,7 +69,7 @@ client.unfocused        $background $background $text  $grey
 
 bar {
     # status_command i3blocks #-c ~/.config/i3/i3blocks.conf
-    status_command i3status -c ~/.config/i3/i3status.conf
+    status_command i3status -c ~/.config/i3satus/config
     position bottom
     #mode hide  # press $mod to show the bar
     # tray_output none
