@@ -1,19 +1,30 @@
 [user]
-	name = Simon Mucha
+	name = Szymon Mucha
 	email = shims506@gmail.com
 
 [push]
 	default = simple
 
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.dotfiles/git/gitignore
-
+	pager = delta
 [branch]
 	autosetupmerge = true
 
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    side-by-side = true
+    line-numbers = true
+
+[merge]
+    conflictstyle = diff3
+
 [diff]
-	tool = vimdiff
+    colorMoved = default
 
 [grep]
 	lineNumber = true
