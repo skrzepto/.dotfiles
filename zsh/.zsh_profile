@@ -4,3 +4,8 @@ VIM="nvim"
 
 export GIT_EDITOR=$VIM
 export DOTFILES=$HOME/.dotfiles
+
+alias killBT="rfkill block bluetooth"
+alias unKillBT="rfkill unblock bluetooth"
+alias cclip="xclip -selection clipboard"
+alias pclip="xclip -selection clipboard"

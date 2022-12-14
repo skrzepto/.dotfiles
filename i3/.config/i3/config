@@ -82,6 +82,7 @@ bindsym $mod+z exec $browser
 bindsym $mod+x exec $filemanager
 bindsym $mod+Return exec $terminal
 bindsym Print exec scrot ~/Pictures/Screenshots/%b%d::%H%M%S.png
+bindsym $mod+Shift+p maim -s | xclip -selection clipboard -t image/png
 
 
 ######## Commands #########
